@@ -1,7 +1,7 @@
 css-zone
 ========
 
-**Piccola "espansione" per Modernizr.**
+**Piccola "espansione" per Modernizr**
 
 Aggiunge:
 - Una di queste classi: *zonarossa*, *zonagialla* o *zonaverde*
