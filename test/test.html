@@ -8,12 +8,14 @@
 <style>
 body { font-size:16px; }
 li { padding-bottom:5px; }
+
 /* ===================================================================
 :: ESEMPIO DI IMPLEMENTAZIONE CSS
 :: visualizza un messaggio personalizzato per ciascuna "zona"
 =================================================================== */
 .avviso-zonarossa, .avviso-zonagialla, .avviso-zonaverde { display:none; }
 .zonarossa .avviso-zonarossa, .zonagialla .avviso-zonagialla, .zonaverde .avviso-zonaverde { display:block; }
+
 </style>
 </head>
 <body>
@@ -32,6 +34,7 @@ li { padding-bottom:5px; }
 <p class="avviso-zonaverde" style="color:#060;">Il tuo browser appartiene alla "<strong>zona verde</strong>". I webmaster del mondo intero ti sono grati.</p>
 
 <script>
+
 /* ===================================================================
 :: ESEMPIO DI IMPLEMENTAZIONE JAVASCRIPT
 :: carica condizionalmente prefixfree su Safari 5< e Firefox 2>3.6
@@ -41,6 +44,7 @@ Modernizr.load([
   {test:Modernizr.deprefix,nope:'prefixfree.js'}
 ]);
 */
+
 </script>
 </body>
 </html>
