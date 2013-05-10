@@ -11,7 +11,7 @@
 		boxShadowPrefix = Modernizr.testAllProps("boxShadow"),
 		borderRadiusUnprefix = Modernizr.testProp("borderRadius"),
 		borderRadiusPrefix = Modernizr.testAllProps("borderRadius"),
-		borderRadiusPrefixed = ""+Modernizr.prefixed('borderRadius').toString().toLowerCase(),
+		borderRadiusPrefixed = ""+Modernizr.prefixed('borderRadius').toLowerCase(),
 		zona;
 	function aggiungiClasse(classe){ document.getElementsByTagName("html")[0].className+=' '+classe; }
 	// test standard
