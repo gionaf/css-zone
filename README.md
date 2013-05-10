@@ -87,6 +87,6 @@ Testato (e funzionante) su:
 - Internet Explorer 6 > 10
 - Safari 3.2 - 5.1
 - Opera 12
-- FireFox 3.6 - 20
+- Firefox 3.6 - 20
 - Chrome 21 - 26
 - iOs Safari 6
