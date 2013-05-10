@@ -3,25 +3,25 @@
 :: (c) Giona Ferrandu | GPL | gionaf.com/playground/css-zone/
 =================================================================== */
 ;(function(Modernizr,window,document,undefined){
-  // nomi delle zone
+	// nomi delle zone
 	var zone = [ 'rossa' , 'gialla' , 'verde' ],
 	// altre variabili
-		boxSizingUnprefix = Modernizr.testProp("boxSizing"),
-		boxShadowUnprefix = Modernizr.testProp("boxShadow"),
-		boxShadowPrefix = Modernizr.testAllProps("boxShadow"),
-		borderRadiusUnprefix = Modernizr.testProp("borderRadius"),
-		borderRadiusPrefix = Modernizr.testAllProps("borderRadius"),
+		boxSizingUnprefix = !!Modernizr.testProp("boxSizing"),
+		boxShadowUnprefix = !!Modernizr.testProp("boxShadow"),
+		boxShadowPrefix = !!Modernizr.testAllProps("boxShadow"),
+		borderRadiusUnprefix = !!Modernizr.testProp("borderRadius"),
+		borderRadiusPrefix = !!Modernizr.testAllProps("borderRadius"),
 		borderRadiusPrefixed = ""+Modernizr.prefixed('borderRadius').toLowerCase(),
 		zona;
 	function aggiungiClasse(classe){ document.getElementsByTagName("html")[0].className+=' '+classe; }
 	// test standard
 	Modernizr.addTest('mediaqueries',Modernizr.mq('only all'));
-	Modernizr.addTest('matchmedia',function(){return window.matchMedia});
+	Modernizr.addTest('matchmedia',function(){return !!window.matchMedia});
 	Modernizr.addTest('standalone',function(){return !!window.navigator.standalone});
 	Modernizr.addTest('boxsizing',function(){return Modernizr.testAllProps("boxSizing")&&(document.documentMode===undefined||document.documentMode>7)});
-	// deprefix
+	// no-deprefix : Safari 5<, Firefox 2>3.6
 	Modernizr.addTest('deprefix',function(){ return (borderRadiusUnprefix&&boxShadowUnprefix)&&(boxShadowPrefix||borderRadiusPrefix); });
-	// deprefix + vendor-prefix
+	// no-deprefix + vendor-prefix
 	if(borderRadiusPrefix&&borderRadiusPrefixed=='mozborderradius') aggiungiClasse('no-deprefix-moz');
 	if(borderRadiusPrefix&&borderRadiusPrefixed=='webkitborderradius') aggiungiClasse('no-deprefix-webkit');
 	// identifico zona
