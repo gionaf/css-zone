@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="modernizr.js"></script>
+<script src="css-zone.js"></script>
+<link rel="canonical" href="http://gionaf.com/playground/css-zone/">
+<style>
+body { font-size:16px; }
+li { padding-bottom:5px; }
+/* ===================================================================
+:: ESEMPIO DI IMPLEMENTAZIONE CSS
+:: visualizza un messaggio personalizzato per ciascuna "zona"
+=================================================================== */
+.avviso-zonarossa, .avviso-zonagialla, .avviso-zonaverde { display:none; }
+.zonarossa .avviso-zonarossa, .zonagialla .avviso-zonagialla, .zonaverde .avviso-zonaverde { display:block; }
+</style>
+</head>
+<body>
+
+<h1>Test css-zone</h1>
+
+<noscript><p style="color:red;">Abilita javascript per effettuare il test</p></noscript>
+<ul>
+<li>User agent:<br><small style="color:#777;"><script>document.write(navigator.userAgent);</script></small></li>
+<li>Modernizr.zona:<br><strong style="color:#777;"><script>document.write(Modernizr.zona);</script></strong></li>
+<li>Classe tag html:<br><strong style="color:#777;"><script>document.write(document.getElementsByTagName("html")[0].className);</script></strong></li>
+</ul>
+
+<p class="avviso-zonarossa" style="color:red;">Il tuo browser appartiene alla "<strong>zona rossa</strong>". Che ne dici di un upgrade?</p>
+<p class="avviso-zonagialla" style="color:#F90;">Il tuo browser appartiene alla "<strong>zona gialla</strong>". Niente male.</p>
+<p class="avviso-zonaverde" style="color:#060;">Il tuo browser appartiene alla "<strong>zona verde</strong>". I webmaster del mondo intero ti sono grati.</p>
+
+<script>
+/* ===================================================================
+:: ESEMPIO DI IMPLEMENTAZIONE JAVASCRIPT
+:: carica condizionalmente prefixfree su Safari 5< e Firefox 2>3.6
+=================================================================== */
+/*
+Modernizr.load([
+  {test:Modernizr.deprefix,nope:'prefixfree.js'}
+]);
+*/
+</script>
+</body>
+</html>
