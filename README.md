@@ -76,9 +76,9 @@ Il plugin aggiunge anche questi test comuni ma che non fanno parte del core di M
 # Altre informazioni
 - Versione: alpha
 - Ultima modifica: 10 Maggio 2013  
-- Autore: [Giona Ferrandu](http://gionaf.com)
-- [Live test](http://gionaf.com/playground/css-zone/test.html)
-- [Maggiori informazioni](http://gionaf.com/playground/css-zone/)
+- Autore: [Giona Ferrandu](http://giona.net)
+- [Live test](http://giona.net/playground/css-zone/test.html)
+- [Maggiori informazioni](http://giona.net/playground/css-zone/)
 
 La divisione in "zone" non si basa su user-agent sniffing o simili, combina invece il supporto di alcune features rilevato da Modernizr.
 Essendo basato su versioni dei browser di 3 o più anni fa, il plugin è sicuramente stabile. Le versioni mobile interessate richiedono però ulteriori test.
